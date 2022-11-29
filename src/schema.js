@@ -5,13 +5,13 @@ const typeDefs = gql`
     username: String!
     password: String!
     name: String!
-    role: String!,
+    role: String!
     attendanceCount: Int!
     id: ID!
   }
 
   type Query {
-    allUsers: [User]
+    allUsers(role: String!): [User]
     getUser(username: String!): User
     me: User
   }
