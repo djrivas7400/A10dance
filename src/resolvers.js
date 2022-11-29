@@ -9,7 +9,7 @@ dotenv.config();
 
 const resolvers = {
   Query: {
-    allUsers: () => User.findAll(),
+    allUsers: (root, args) => User.findAll({ where: { role: args.role} }),
     getUser: (root, args) => User.findOne({ where: { username: args.username.toLowerCase() } }),
     me: (root, args, context) => context.currentUser,
   },
