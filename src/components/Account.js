@@ -15,7 +15,7 @@ const Account = () => {
         <ListGroup.Item><b>Username:</b> {me.data && me.data.me ? me.data.me.username : ''}</ListGroup.Item>
         <ListGroup.Item><b>Name: </b> {me.data && me.data.me ? me.data.me.name : ''}</ListGroup.Item>
         <ListGroup.Item><b>Role:</b> {me.data && me.data.me ? me.data.me.role : ''}</ListGroup.Item>
-        <ListGroup.Item><b>Attendance Count:</b> {me.data && me.data.me ? me.data.me.attendanceCount : ''}</ListGroup.Item>
+        {me.data.me.role === "Student" && <ListGroup.Item><b>Attendance Count:</b> {me.data && me.data.me ? me.data.me.attendanceCount : ''}</ListGroup.Item>}
         <ListGroup.Item><b>ID:</b> {me.data && me.data.me ? me.data.me.id : ''}</ListGroup.Item>
       </ListGroup>
     </div>
