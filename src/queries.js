@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const ALLUSERS = gql`
   query AllUsers {
-    allUsers(role: "Student" {
+    allUsers(role: "Student") {
       username
       password
       name
